@@ -168,20 +168,12 @@ footer {
   color: white;
 }
 
-/* ===== ANIMATION ===== */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 /* ===== FLOATING WHATSAPP ===== */
 .wa-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
   background-color: #25D366;
-  color: white;
-  font-size: 24px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -193,26 +185,35 @@ footer {
   transition: 0.3s;
   z-index: 1000;
 
-  /* animasi awal */
   opacity: 0;
   transform: translateY(40px);
   animation: slideUp 0.8s ease forwards;
-  animation-delay: 0.8s; /* muncul setelah hero */
+  animation-delay: 1s;
+}
+
+.wa-float img {
+  width: 30px;
 }
 
 .wa-float:hover {
   transform: scale(1.1);
 }
 
-.wa-float:hover {
-  transform: scale(1.1);
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 @keyframes slideUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+
 </style>
 </head>
 
@@ -265,15 +266,17 @@ footer {
 <section id="contact">
   <h2>Hubungi Kami</h2>
   <p>Jl. Senja No. 10, Kota Kamu</p>
-  <a href="https://wa.me/6282129942649?text=Halo%20Senja%20Coffee,%20saya%20ingin%20memesan."
-   class="wa-float" target="_blank">
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="30">
-</a>
 </section>
 
 <footer>
   © 2026 Senja Coffee. All rights reserved.
 </footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/6281234567890?text=Halo%20Senja%20Coffee,%20saya%20ingin%20memesan."
+   class="wa-float" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
 
 <script>
 window.addEventListener("scroll", function() {
